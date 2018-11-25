@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<h1>Strategy Learner Training</h1>
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link" data-toggle="tab" href="#Overview">Overview</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link active show" data-toggle="tab" href="#profile">Profile</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link disabled" href="#">Disabled</a>
+	  </li>
+	  
+	</ul>
+	<div id="myTabContent" class="tab-content">
+	  <div class="tab-pane fade" id="Overview">
+	    <p>Q-learning builds a table of utility values as the agent interacts with the world. These Q-values can be used at each step to select the best action based on what it has learned so far. <br>The fantastic thing about Q-learning is that it is guaranteed to provide an optimal policy.</p>
+	  </div>
+	  <div class="tab-pane fade active show" id="profile">
+	    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+	  </div>
+	</div>
+
+	<h4>{{ symbol }} with data from {{ start_date }} to {{ end_training_d }}</h4>
+
+	{{ div_placeholder_plot_cum }}
+
+
+{% endblock %}

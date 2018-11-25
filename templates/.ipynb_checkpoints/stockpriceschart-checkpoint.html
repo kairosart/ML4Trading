@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Indicators</h1>
+    <div class="btn-group" role="group" aria-label="Choose indicator">
+      <button type="button" class="btn btn-primary">Choose an indicator</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 45px, 0px);">
+          <a class="dropdown-item" href="#StockPrices">Stock Prices</a>
+          <a class="dropdown-item" href="#Momentum">Momentum</a>
+          <a class="dropdown-item" href="#Bollinger Bands">Bollinger Bands</a>  
+        </div>
+      </div>
+    </div>
+
+    
+    <h2 id="StockPrices"></h2>
+    {{ div_placeholder_stock_prices }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Stock Prices</h4>
+        <p class="card-text">Stock Adjust Value price, from 2008 to yesterday. Hover over the chart to see all the options.</p>
+      </div>
+    </div>        
+
+
+    <h2 id="Momentum"></h2>
+    {{ div_placeholder_momentum }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Momentum</h4>
+        <p class="card-text">Momentum is perhaps the simplest and easiest oscillator to understand and use; it is the measurement of the speed or velocity of price changes. We're using a window=10</p>
+          <a href="https://www.investopedia.com/articles/technical/081501.asp" target="_blank" class="alert-link">More info.</a> 
+      </div>
+    </div> 
+
+<h2 id="Bollinger Bands"></h2>
+    {{ div_placeholder_bollinger }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Bollinger Bands</h4>
+        <p class="card-text">John Bollinger, in the 1980s, came up with something he calls Bollinger bands.
+
+What Bollinger observed was that we ought to take a look at the recent volatility of the stock. And if it's very volatile, we might discard movements above and below the mean.
+
+Whereas if it's not very volatile, a similarly sized movement maybe we should pay attention to.<br><br>
+            His idea then was to add a band 2 standard deviations above and 2 standard deviations below. And in particular, if we drop below that and then up back through it, that is potentially right there a buy signal, because the hypothesis there is that we've gone quite far from the simple moving average. And we're now moving back towards it.<br><br>
+
+So if you buy there, you should anticipate positive returns as it climbs back through the average.<br><br>
+            Similarly, if it punched through the top and then go back down through, that's potentially a sell signal.
+
+
+
+</p>
+          <a href="https://www.investopedia.com/walkthrough/forex/intermediate/level4/bollinger-bands.aspx" target="_blank" class="alert-link">More info.</a> 
+      </div>
+    </div> 
+ 
+{% endblock %}

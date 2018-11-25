@@ -1,0 +1,18 @@
+<h1>Initial data: </h1>
+<ul>
+    <li>Start date: {{ start_date }}</li>
+    <li>End date: {{ end_date }}</li>
+    <li>Initial capital: {{ start_val }}</li>
+    <li>Symbol: {{ symbol }}</li>
+    <li>Commission: {{ commission }}</li>
+    <li>Impact: {{ impact }}</li>
+    <li>Shares: {{ num_shares }}</li>
+</ul>
+
+<div class=page>
+  <h1>Stock values  {{ symbol }} </h1>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div>

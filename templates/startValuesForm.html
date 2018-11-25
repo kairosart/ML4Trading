@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+    <br>
+    <div class="card border-primary mb-3" >
+      <div class="card-header">Start values</div>
+      <div class="card-body">
+        <h4 class="card-title"></h4>
+        <p class="card-text">Introduce your porfolio initial values.</p>
+      </div>
+    </div>
+    
+		
+      {% for message in form.start_val.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.symbol.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.num_shares.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+
+      
+      <form id="form" class="form" action = "/showvalues" method = post>
+         <fieldset>
+            <legend>Start Values Form</legend>
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                {{ form.csrf_token }}<br> 
+                {{ form.start_val.label }} {{ form.start_val(class_="form-control", size=10, value=100000) }} <br>
+                
+                {{ form.symbol.label }} {{ form.symbol(class_="form-control", size=4, value="AMZN") }}<br>
+                
+                {{ form.commission.label }} {{ form.commission(class_="form-control", size=4, value=0.00) }}<br>
+                
+                {{ form.impact.label }} {{ form.impact(class_="form-control", size=4, value=0.00) }}<br>
+                
+                {{ form.num_shares.label }} {{ form.num_shares(class_="form-control", size=10, value=1000) }}<br>
+                
+               <br>
+                {{ form.submit(class_="btn btn-primary btn-lg btn-block", id="submitButton") }}
+
+            </div>
+
+         </fieldset>
+      </form>
+{% endblock %}

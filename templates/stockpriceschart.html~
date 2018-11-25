@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Indicators</h1>
+    <div class="btn-group" role="group" aria-label="Choose indicator">
+      <button type="button" class="btn btn-primary">Choose an indicator</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 45px, 0px);">
+          <a class="dropdown-item" href="#StockPrices">Stock Prices</a>
+          <a class="dropdown-item" href="#Momentum">Momentum</a>
+          <a class="dropdown-item" href="#Bollinger Bands">Bollinger Bands</a>
+          <a class="dropdown-item" href="#Simple Moving Average (SMA)">Simple Moving Average (SMA)</a>
+          <a class="dropdown-item" href="#Relative Strength Index (RSI)">Relative Strength Index (RSI)</a>          
+        </div>
+      </div>
+    </div>
+
+    
+    <h2 id="StockPrices"></h2>
+    {{ div_placeholder_stock_prices }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Stock Prices</h4>
+        <p class="card-text">Stock Adjust Value price, from 2008 to yesterday. Hover over the chart to see all the options.</p>
+                  <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" class="alert-link">More info.</a> 
+         <div align="right">
+  				<a href="#">Go to top</a>
+			</div> 
+      </div>
+    </div>        
+
+
+    <h2 id="Momentum"></h2>
+    {{ div_placeholder_momentum }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Momentum</h4>
+        <p class="card-text">
+			<strong>Type:</strong> It's a trend indicator.<br><br>
+
+			<strong>Description:</strong> <br>
+			
+
+    		<ul>It refers to the rate of change on price movements for a particular asset – that is, the speed at which the price is changing.</ul>
+    		<ul>If a trader wants to use a momentum-based strategy, he takes a long position in a stock or asset that has been trending up. If the stock is trending down, he takes a short position. Instead of the traditional philosophy of trading – buy low, sell high – momentum investing seeks to sell low and buy lower, or buy high and sell higher.</ul>
+			<br><br>
+			<strong>Buy signal:</strong> If the trend line is up, the momentum investor should buy the stock.<br><br>
+
+			<strong>Sell signal:</strong> If the trend line is down, the momentum investor should sell the stock.<br><br>	        
+        </p>
+          <a href="https://www.investopedia.com/articles/technical/081501.asp" target="_blank" class="alert-link">More info.</a> 
+                    <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" class="alert-link">More info.</a> 
+         <div align="right">
+  				<a href="#">Go to top</a>
+			</div> 
+      </div>
+    </div> 
+
+<h2 id="Bollinger Bands"></h2>
+    {{ div_placeholder_bollinger }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Bollinger Bands</h4>
+                <p class="card-text">
+			<strong>Type:</strong> It's a volatility indicator.<br><br>
+
+			<strong>Description:</strong> <br>
+			
+
+    		Bollinger Bands® are two "bands" (2 standard deviation) that sandwich the market price. Many traders use them primarily to determine overbought and oversold levels. 
+			<br><br>
+			<strong>Buy signal:</strong> When the price touches the lower Bollinger Band®.<br><br>
+
+			<strong>Sell signal:</strong> when the price touches the upper Bollinger Band®.<br><br>	        
+        </p>
+          <a href="https://www.investopedia.com/walkthrough/forex/intermediate/level4/bollinger-bands.aspx" target="_blank" class="alert-link">More info.</a>
+                    <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" class="alert-link">More info.</a> 
+         <div align="right">
+  				<a href="#">Go to top</a>
+			</div>  
+      </div>
+    </div> 
+    
+<h2 id="Simple Moving Average (SMA)"></h2>
+    {{ div_placeholder_sma }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Simple Moving Average (SMA)</h4>
+                <p class="card-text">
+			<strong>Type:</strong> It's a trend indicator.<br><br>
+
+			<strong>Description:</strong> <br>
+			
+
+			The moving average is one of the most widely used technical indicators. It is used along with other technical indicators or it can form the building block for the computation of other technical indicators.
+
+			A “moving average” is average of the asset prices over the “x” number of days/weeks. The term “moving” is used because the group of data moves forward with each new trading day. For each new day, we include the price of that day and exclude the price of the first day in the data sequence.
+			<br><br>
+			<strong>Buy signal:</strong> When the closing price moves above the moving average.<br><br>
+
+			<strong>Sell signal:</strong> When the *closing price moves below the moving average.<br><br>
+			<strong>Quantifying:</strong> <br>
+
+			We also need a way to quantify it, to turn it into a number.
+			The way we do that is to compare the current price with the current simple moving average, and construct a ratio.
+			So, if, for instance, the price is 10% above the simple moving average, we'd end up getting a positive 0.1.
+			If it were 10% below, we'd get a negative 0.1.<br>	        
+        </p>
+          <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank" class="alert-link">More info.</a> 
+                  <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" class="alert-link">More info.</a> 
+         <div align="right">
+  				<a href="#">Go to top</a>
+			</div>   
+      </div>
+    </div>     
+
+<h2 id="Relative Strength Index (RSI)"></h2>
+	{{ div_placeholder_rsi }}
+    <div class="card border-info mb-3" >
+      <div class="card-header">Info</div>
+      <div class="card-body">
+        <h4 class="card-title">Relative Strength Index (RSI)</h4>
+                <p class="card-text">
+			<strong>Type:</strong> It's a momentum indicator.<br><br>
+
+			<strong>Description:</strong> <br>
+			
+			RSI is a momentum indicator that measures the magnitude of recent price changes to analyze overbought or oversold conditions. It is primarily used to attempt to identify overbought or oversold conditions in the trading of an asset.
+
+			<br><br>
+			<strong>Buy signal:</strong> When the RSI moves below 50 and then back above it.<br><br>
+
+			<strong>Sell signal:</strong> When the RSI moves above 50 and then back below it.<br><br>
+			<strong>Quantifying:</strong> <br>
+
+			<ul>RSI values of 70 or above indicate that a security is becoming overbought or overvalued, and therefore, may be primed for a trend reversal or corrective [pullback](https://www.investopedia.com/terms/p/pullback.asp in price.</ul>
+			<ul>RSI reading of 30 or below is commonly interpreted as indicating an oversold or undervalued condition that may signal a trend change or corrective price reversal to the upside.<br></ul>	        
+        </p>
+          <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" class="alert-link">More info.</a> 
+         <div align="right">
+  				<a href="#">Go to top</a>
+			</div> 
+          
+      </div>
+    </div>   
+ 
+ 	<div align="right">
+  	<a href="benchmark" class="btn btn-success">Next ></a><br><br>
+	</div>
+{% endblock %}
